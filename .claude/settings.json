@@ -16,6 +16,36 @@
   },
   "hooks": {
     "enabled": true,
-    "directory": ".claude/hooks"
+    "directory": ".claude/hooks",
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/SessionStart.sh"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/UserPromptSubmit.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/Stop.sh"
+          }
+        ]
+      }
+    ]
   }
 }
